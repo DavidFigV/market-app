@@ -1,4 +1,4 @@
-package com.tecdesoftware.market_app;
+package com.tecdesoftware.market;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
