@@ -1,7 +1,5 @@
 package com.tecdesoftware.market.persistance.entity;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "compras_productos")
@@ -9,6 +7,16 @@ public class CompraProducto {
 
     @EmbeddedId //Viene de nuestra clase CompraProductoPK
     private CompraProductoPK id;
+
+    @ManyToOne
+    @MapsId("compraId")
+    @JoinColumn(name = "id_compra", insertable = false, updatable = false)
+    private Compra compra;
+
+    @ManyToOne
+    @MapsId("productoId")
+    @JoinColumn(name = "id_producto", insertable = false, updatable = false)
+    private Producto producto;
 
     private Integer cantidad;
     private Double total;
