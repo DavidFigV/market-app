@@ -11,13 +11,14 @@ public class Producto {
     //Valor único autoincrementable
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "id_producto")
-    private Integer idProducto;
+    private int idProducto;
+
     private String nombre;
 
     @Column (name= "id_categoria")
-    private Integer IdCategoria;
+    private int IdCategoria;
 
-    @Column (name = "coidgo_barras")
+    @Column (name = "codigo_barras")
     private String codigoBarras;
 
     @Column (name = "precio_venta")
@@ -32,10 +33,7 @@ public class Producto {
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
 
-    @OneToMany(mappedBy = "compra")
-    private List<CompraProducto> compras;
-
-    public Integer getIdProducto() {
+    public int getIdProducto() {
         return idProducto;
     }
 
@@ -51,7 +49,7 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public Integer getIdCategoria() {
+    public int getIdCategoria() {
         return IdCategoria;
     }
 

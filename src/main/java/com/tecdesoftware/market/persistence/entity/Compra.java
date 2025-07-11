@@ -28,11 +28,11 @@ public class Compra {
 
     // Insertable y updatable especifican que la tabla relacionada no busca ser modificada
     @ManyToOne
-    @JoinColumn(name = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
 
     // Este me va a decir cúantos productos se compraron
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "compra")
     private List<CompraProducto> productos;
 
     public Integer getIdCompra() {
