@@ -11,12 +11,12 @@ public class Producto {
     //Valor único autoincrementable
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "id_producto")
-    private int idProducto;
+    private Integer idProducto;
 
     private String nombre;
 
     @Column (name= "id_categoria")
-    private int IdCategoria;
+    private Integer idCategoria;
 
     @Column (name = "codigo_barras")
     private String codigoBarras;
@@ -50,11 +50,11 @@ public class Producto {
     }
 
     public int getIdCategoria() {
-        return IdCategoria;
+        return idCategoria;
     }
 
     public void setIdCategoria(Integer idCategoria) {
-        IdCategoria = idCategoria;
+        this.idCategoria = idCategoria;
     }
 
     public String getCodigoBarras() {
