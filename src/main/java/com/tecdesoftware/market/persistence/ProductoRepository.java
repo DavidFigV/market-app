@@ -36,7 +36,7 @@ public class ProductoRepository implements ProductRepository {
         return productos.map(prods -> mapper.toProducts(prods));
     }
 
-    //Obtener un producto dado el id
+    //Obtener un producto dado id
     @Override
     public Optional<Product> getProduct(int productId) {
         return productoCrudRepository.findById(productId).map(producto -> mapper.toProduct(producto));
