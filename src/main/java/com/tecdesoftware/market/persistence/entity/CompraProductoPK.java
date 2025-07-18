@@ -7,9 +7,6 @@ import java.io.Serializable;
 
 @Embeddable
 public class CompraProductoPK implements Serializable {
-    private Long compraId;
-    private Long productoId;
-
     @Column(name = "id_compra")
     private Integer idCompra;
 

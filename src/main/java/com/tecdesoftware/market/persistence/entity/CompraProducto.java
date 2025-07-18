@@ -9,12 +9,12 @@ public class CompraProducto {
     private CompraProductoPK id;
 
     @ManyToOne
-    @MapsId("compraId")
+    @MapsId("idCompra")
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 
     @ManyToOne
-    @MapsId("productoId")
+    //@MapsId("idProducto") Esto ocasionaba error al save()
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
     private Producto producto;
 
