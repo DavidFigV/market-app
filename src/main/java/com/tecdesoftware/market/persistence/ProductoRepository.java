@@ -13,7 +13,7 @@ import java.util.Optional;
 public class ProductoRepository implements ProductRepository {
     @Autowired
     private ProductoCrudRepository productoCrudRepository;
-
+    String variable = "sde";
     @Autowired
     private ProductMapper mapper;
 
